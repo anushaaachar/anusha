@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <h1>PAGE!</h1>
+    </head>
+    <style>
+        table{
+            width : 70%;
+            border: 1px solid black;
+            border-collapse:collapse;
+            
+        }
+        th,td{
+            border: 1px solid black;
+            padding: 15px;
+            text-align:left;
+            
+        }
+        th{
+            background-color:floralwhite;
+        }
+    </style>
+    <body>
+        <table>
+    <tr>
+        
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>USERNAME</th>
+            <th>DOB</th>
+            <th>CITY</th>
+            <th>CONTACT</th>
+        
+    </tr>
+
+        <tr>
+        <td><span id="result"></span><br></td>
+        <td><span id="result1"></span><br></td>
+        <td><span id="result2"></span><br></td>
+        <td><span id="result3"></span><br></td>
+        <td><span id="result4"></span><br></td>
+        <td><span id="result5"></span></td>
+    </tr>
+        </table>
+    <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue")
+        document.getElementById("result1").innerHTML=localStorage.getItem("textvalue1")
+        document.getElementById("result2").innerHTML=localStorage.getItem("textvalue2")
+        document.getElementById("result3").innerHTML=localStorage.getItem("textvalue3")
+        document.getElementById("result4").innerHTML=localStorage.getItem("textvalue4")
+        document.getElementById("result5").innerHTML=localStorage.getItem("textvalue5")
+    </script>
+
+    </body>
+</html>

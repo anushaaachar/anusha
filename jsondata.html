@@ -1,0 +1,29 @@
+</doctype html>
+<html lang="en">
+    <head>
+        <style type="text/css">
+            body{
+                font-family:'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>JSON Data</h2>
+        <p id="data"></p>
+        <script type="text/javascript">
+        fetch('./data.json')
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            for(var i=0;i<data.length;i++){
+                document.getElementById("data").innerHTML +=
+                data[i].id + "-" + data[i].firstName+ " " +data[i].password + "<br/>"
+            }
+        })
+        .catch(function(err){
+            console.log(err)
+        });
+        </script>
+    </body>
+</html>

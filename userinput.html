@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Putting User Input into JS Objects</title>
+    <style>
+        .formBox{
+            padding: 0.5rem 2rem;
+        }
+        body
+            {
+                margin:0px;
+                background-color: #cccccc;
+                background-color:transparent;
+                color:black;
+                font-family:"Comic Sans MS", cursive;
+            }
+            #main{
+                width:600px; 
+                height:auto; 
+                overflow:hidden;
+                padding-bottom:20px; 
+                margin-left:auto; 
+                margin-right:auto; 
+                border-radius:5px; 
+                padding-left:10px; 
+                margin-top:50px; 
+                border-top:3px double black; 
+                border-bottom:3px double black;
+                padding-top:20px;
+            }
+            .btn
+            {
+                width:150px; 
+                height:32px; 
+                text-align: center;
+                outline:none;  
+                color:#f7f7f7; 
+                font-weight:bold;
+                border:1px solid black; 
+                text-shadow: 0px 0.5px 0.5px #fff; 
+                border-radius: 2px; 
+                font-weight: 600; 
+                color: black; 
+                letter-spacing: 1px; 
+                font-size:14px;
+                 background-color:white; 
+                }
+                .tb
+                {
+                    height:28px; 
+                    width:230px; 
+                    border-top:1px solid black; 
+                    color:black;
+                    font-weight:bold; 
+                    border-left:1px solid black; 
+                    opacity:0.9;
+                }
+                .table
+                    {
+                        font-family:"Comic Sans MS", cursive;
+                    }
+                .h1{
+                    text-align:center;
+                }
+                                    
+    </style>
+</head>
+<body>
+    <form action="link1.html">
+        
+        <h1 class="h1">Registration Form</h1>
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+            <tr>
+            <td>Enter Name :</td>
+            <td><input type="text" placeholder="Enter user here" id="name" class="tb" /></td>
+            </tr>
+            <tr>
+            <td>Enter Email ID :</td>
+            <td><input type="text" placeholder="Enter Email ID here" id="email" class="tb" /></td>
+            </tr>
+            <tr>
+            <td>Enter Username :</td>
+            <td><input type="text" placeholder="Enter Username here" id="username" class="tb" /></td>
+            </tr>
+            <tr>
+                <td> Gender :</td>
+                <td><input type="radio" name="sex" value="Male" id="gender" /><span>Male</span>
+                <input type="radio" name="sex" value="Female" id="gender" /><span>Female</span>
+                <input type="radio" name="sex" value="Others" id="gender"/><span>Others</span>
+            </td>
+            </tr>
+            <tr>
+                <td>Enter DOB :</td>
+                   <td><input type="date" name="birthday" id="dob" class="tb" ></td>
+            </tr>
+            <tr>
+                <td> City :</td>
+                <td><select name="city" id="select" class="tb">
+                <option selected="" value="Default">Select a City</option>
+                <option value="califonia">califonia</option>
+                <option value="France">France</option>
+                <option value="banglore">banglore</option>
+                <option value="sanfransisco">sanfransisco</option>
+                <option value="New york">New york</option>
+                </select></td>
+            </tr>
+            
+            <tr>
+            <td>Enter Password :</td>
+            <td><input type="password" placeholder="Enter Password here" id="pass" class="tb" /></td>
+            </tr>
+            <tr>
+            <td>Enter Confirm Password :</td>
+            <td><input type="password" placeholder="Enter Password here" id="pass1" class="tb" /></td>
+            </tr>
+            <td>Enter Address:</td>
+            <td><input type="text" placeholder="Enter Address here" id="address" class="tb" /></td>
+            </tr>
+            <td>Enter Contact number:</td>
+            <td><input type="text" placeholder="Enter Contact number here" id="contact" class="tb" /></td>
+            </tr>
+            <tr>
+        <div class="formBox">
+            <td><button id="btn" class="tb">Register</button></td>
+            <td><button id="btn" class="tb">clear</button></td>
+              
+            </td>
+        </div>
+        </tr>
+    </table>
+    </center>
+        <div id="msg">
+            <pre></pre>
+        </div> 
+    </form>
+    <script>
+        let Employee = [];
+        // example {id:1592304983049, title: 'Deadpool', year: 2015}
+        const addEmp = (ev)=>{
+            ev.preventDefault();  //to stop the form submitting
+            let Emp = {
+                id: Date.now(),
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                username: document.getElementById('username').value,
+                Password: document.getElementById('pass').value,
+                CPassword: document.getElementById('pass1').value,
+                Address: document.getElementById('address').value,
+                Contact: document.getElementById('contact').value,
+                DOB: document.getElementById('dob').value,
+                gender: document.getElementById('gender').value.checked ? 'Male' : 'Female',
+                city: document.getElementById('select').value,
+            }
+            Employee.push(Emp);
+            document.forms[0].reset(); // to clear the form for the next entries
+
+            //for display purposes only
+            console.warn('added' , {Employee} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(Employee, '\t', 2);
+
+            //saving to localStorage
+            localStorage.setItem('MyEmpList', JSON.stringify(Employee) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addEmp);
+        });
+    </script>
+</form>
+</body>
+</html>

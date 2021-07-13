@@ -1,0 +1,41 @@
+h1{
+    margin-left: 50px;
+    color: navy;
+    }
+   h2{
+    margin-left: 50px;
+    color: navy;
+    margin-top: -20px;
+    }
+    form li{
+    list-style: none;
+    margin-bottom: 5px;
+    }
+    form ul li label
+    {
+    float: left;
+    clear: left;
+    width: 265px;
+    text-align: right;
+    margin-right: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:14px;
+    }
+   form ul li input, select, span 
+    {
+    float: left;
+    margin-bottom: 10px;
+    border: 1px solid maroon;
+    }
+  body{
+      background-color:silver;
+      text-align: center;   
+  }
+  input[type=submit]{
+    font-size: 16px;
+    border: 1px solid black;
+    color:black;
+    font-weight: bold;
+    width: 20%;
+
+    }

@@ -1,0 +1,27 @@
+[
+  {
+    "id":"1",
+    "firstName":"John",
+    "password":"an123@"
+  },
+  {
+    "id":"2",
+    "firstName":"mosh",
+    "password":"an123@"
+  },
+  {
+    "id":"3",
+    "firstName":"anu",
+    "password":"an123@"
+  },
+  {
+    "id":"4",
+    "firstName":"anusha",
+    "password":"an123@"
+  },
+  {
+    "id":"5",
+    "firstName":"acharya",
+    "password":"an123@"
+  }
+]

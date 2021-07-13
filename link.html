@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            function pass()
+            {
+                var firstname=document.getElementById("txt").value;
+                var secondname=document.getElementById("txt1").value;
+                var thirdname=document.getElementById("txt2").value;
+                var forthname=document.getElementById("txt3").value;
+                var fifthname=document.getElementById("txt4").value;
+                var sixthname=document.getElementById("txt5").value;
+                
+                localStorage.setItem("textvalue",firstname);
+                localStorage.setItem("textvalue1",secondname);
+                localStorage.setItem("textvalue2",thirdname);
+                localStorage.setItem("textvalue3",forthname);
+                localStorage.setItem("textvalue4",fifthname);
+                localStorage.setItem("textvalue5",sixthname);
+                return false;
+            }
+        </script>
+    </head>
+        <body>
+            <center>
+                <h1>REGISTRATION FORM</h1>
+                <form action="link1.html">
+                <input type="text" id="txt" placeholder="Enter the name"/><br>
+                <input type="text" id="txt1"placeholder="Enter the email"/><br>
+                <input type="text" id="txt2" placeholder="Enter the username"/><br>
+                <input type="date" id="txt3"placeholder="Enter the dob"/><br>
+                <input type="text" id="txt4" placeholder="Enter the City"/><br>
+                <input type="text" id="txt5"placeholder="Enter the Contact"/><br>
+                <input type="submit" value="click" onclick="pass();"/>
+                </form>
+            </center>
+        </body>
+   
+</html>

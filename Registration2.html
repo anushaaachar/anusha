@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+  <!-- Include CSS File Here -->
+<link rel="stylesheet" href="Registration2.css"/>
+<!-- Include JS File Here -->
+<script src="Registration2.js"></script>
+  </head>
+
+	<body>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h1>Registration Form</h1>
+	</div>
+	<!-- create account div -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter Name :</td>
+	<td><input type="text" placeholder="Enter user here" id="t1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Email ID :</td>
+	<td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Username :</td>
+	<td><input type="text" placeholder="Enter Username here" id="t3" class="tb" /></td>
+	</tr>
+    <tr>
+        <td> Gender :</td>
+        <td><input type="radio" name="sex" value="Male" /><span>Male</span>
+        <input type="radio" name="sex" value="Female" /><span>Female</span>
+        <input type="radio" name="sex" value="Others" /><span>Others</span>
+    </td>
+    </tr>
+	<tr>
+		<td>Enter DOB :</td>
+  		 <td><input type="date" name="birthday" id="t8" class="tb" ></td>
+	</tr>
+    <tr>
+        <td> City :</td>
+        <td><select name="city" id="t9" class="tb">
+        <option selected="" value="Default">Select a City</option>
+        <option value="AF">califonia</option>
+        <option value="AL">portus</option>
+        <option value="DZ">banglore</option>
+        <option value="AS">sanfransisco</option>
+        <option value="AD">New york</option>
+        </select></td>
+    </tr>
+    
+	<tr>
+	<td>Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Confirm Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="t5" class="tb" /></td>
+	</tr>
+    <td>Enter Address:</td>
+	<td><input type="text" placeholder="Enter Address here" id="t6" class="tb" /></td>
+	</tr>
+    <td>Enter Contact number:</td>
+	<td><input type="text" placeholder="Enter Contact number here" id="t7" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>
+	<input type="submit" value="Create Account" class="btn" onclick="registration()" />
+    <input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+    </td>
+	</tr>
+	</table>
+	</div>
+	<!-- create account box ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+	</body>
+	</html>
